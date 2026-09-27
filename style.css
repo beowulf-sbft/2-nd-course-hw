@@ -77,46 +77,47 @@ a {
   color: #202027;
 }
 
-/* === Star decorations === */
-.welcome__star {
+/* === Decorative elements (welcome) === */
+.welcome__deco {
   position: absolute;
   pointer-events: none;
   user-select: none;
 }
 
-.welcome__star--1 {
-  width: 80px;
-  top: 60px;
-  right: 220px;
+/* Big spiky starburst + outline lightning lines — top-right, partially overflows */
+.welcome__deco--starburst {
+  width: 680px;
+  top: -160px;
+  right: -60px;
+}
+
+/* Large outline star — bottom-right, partially cut off */
+.welcome__deco--star-outline {
+  width: 420px;
+  bottom: -160px;
+  right: 260px;
   opacity: 0.9;
 }
 
-.welcome__star--2 {
-  width: 48px;
-  top: 160px;
-  right: 120px;
+/* Small solid 4-point stars — left side near title */
+.welcome__deco--star-sm-1 {
+  width: 57px;
+  top: 94px;
+  left: 63px;
+}
+
+.welcome__deco--star-sm-2 {
+  width: 35px;
+  top: 69px;
+  left: 156px;
   opacity: 0.7;
 }
 
-.welcome__star--3 {
-  width: 110px;
-  bottom: 100px;
-  right: 300px;
-  opacity: 0.9;
-}
-
-.welcome__star--4 {
-  width: 36px;
-  bottom: 200px;
-  right: 160px;
-  opacity: 0.6;
-}
-
-.welcome__star--5 {
-  width: 60px;
-  top: 50%;
-  right: 80px;
-  opacity: 0.8;
+.welcome__deco--star-sm-3 {
+  width: 83px;
+  bottom: 132px;
+  right: 427px;
+  opacity: 0.85;
 }
 
 /* === About block === */
