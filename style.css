@@ -1,0 +1,224 @@
+/* === Reset & Base === */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #202027;
+  color: #202027;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* === Welcome block === */
+.welcome {
+  position: relative;
+  min-height: 100vh;
+  background-color: #E1FF8F;
+  display: flex;
+  align-items: center;
+  padding: 120px;
+  overflow: hidden;
+}
+
+.welcome__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  max-width: 769px;
+}
+
+.welcome__title {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.22;
+  color: #202027;
+}
+
+.welcome__subtitle {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.33;
+  color: #202027;
+}
+
+.welcome__subtitle--semibold {
+  font-weight: 600;
+}
+
+.welcome__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 247px;
+  height: 66px;
+  padding: 16px 28px;
+  background-color: #202027;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  border-radius: 60px;
+  border: 2px solid #202027;
+  transition: background-color 0.2s, color 0.2s;
+  cursor: pointer;
+}
+
+.welcome__btn:hover {
+  background-color: transparent;
+  color: #202027;
+}
+
+/* === Decorative elements (welcome) === */
+.welcome__deco {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Big spiky starburst + outline lightning lines — top-right, partially overflows */
+.welcome__deco--starburst {
+  width: 680px;
+  top: -160px;
+  right: -60px;
+}
+
+/* Large outline star — bottom-right, partially cut off */
+.welcome__deco--star-outline {
+  width: 420px;
+  bottom: -160px;
+  right: 260px;
+  opacity: 0.9;
+}
+
+/* Small solid 4-point stars — left side near title */
+.welcome__deco--star-sm-1 {
+  width: 57px;
+  top: 94px;
+  left: 63px;
+}
+
+.welcome__deco--star-sm-2 {
+  width: 35px;
+  top: 69px;
+  left: 156px;
+  opacity: 0.7;
+}
+
+.welcome__deco--star-sm-3 {
+  width: 83px;
+  bottom: 132px;
+  right: 427px;
+  opacity: 0.85;
+}
+
+/* === About block === */
+.about {
+  padding: 120px;
+}
+
+.about__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+}
+
+.about__header {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.about__title {
+  font-size: 64px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.about__desc {
+  font-size: 24px;
+  font-weight: 400;
+  color: #ffffff;
+  max-width: 788px;
+  line-height: 1.5;
+}
+
+.about__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 378px);
+  gap: 32px;
+  justify-content: center;
+}
+
+.about__col {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* === Game card === */
+.game-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 30px;
+  overflow: hidden;
+  transition: transform 0.25s ease;
+}
+
+.game-card:hover {
+  transform: scale(1.05);
+  z-index: 1;
+  position: relative;
+}
+
+.game-card__cover {
+  width: 100%;
+  height: 314px;
+  object-fit: cover;
+  border-radius: 30px;
+  display: block;
+}
+
+.game-card__body {
+  padding: 32px 32px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.game-card__num {
+  font-size: 16px;
+  font-weight: 400;
+  color: #9b9b9b;
+}
+
+.game-card__name {
+  font-size: 32px;
+  font-weight: 700;
+  color: #202027;
+  line-height: 1.2;
+}
+
+/* === Footer === */
+.footer {
+  padding: 40px 120px;
+  text-align: center;
+}
+
+.footer__text {
+  font-size: 16px;
+  font-weight: 400;
+  color: #ffffff;
+  opacity: 0.5;
+}

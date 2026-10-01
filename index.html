@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сайт с мини-играми</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Block 1: Welcome -->
+  <section class="welcome">
+    <!-- big starburst + lightning lines, top-right -->
+    <img src="img/deco-starburst.png" alt="" class="welcome__deco welcome__deco--starburst" aria-hidden="true">
+    <!-- large outline star, bottom-right -->
+    <img src="img/deco-star-outline.png" alt="" class="welcome__deco welcome__deco--star-outline" aria-hidden="true">
+    <!-- small solid 4-point stars -->
+    <img src="img/star.png" alt="" class="welcome__deco welcome__deco--star-sm-1" aria-hidden="true">
+    <img src="img/star.png" alt="" class="welcome__deco welcome__deco--star-sm-2" aria-hidden="true">
+    <img src="img/star.png" alt="" class="welcome__deco welcome__deco--star-sm-3" aria-hidden="true">
+
+    <div class="welcome__content">
+      <h1 class="welcome__title">Добро пожаловать<br>на мой сайт мини-игр</h1>
+      <p class="welcome__subtitle">Тебе предстоит пройти несколько увлекательных игр.<br>Если готов, нажимай <span class="welcome__subtitle--semibold">«Поехали!»</span> и <span class="welcome__subtitle--semibold">приступай</span>.</p>
+      <a href="#about" class="welcome__btn">Поехали!</a>
+    </div>
+  </section>
+
+  <!-- Block 2: About games -->
+  <section class="about" id="about">
+    <div class="about__inner">
+      <div class="about__header">
+        <h2 class="about__title">Об играх</h2>
+        <p class="about__desc">В моей коллекции представлено 6 игр на разные темы. Игры несложные — в них может поиграть каждый. Все игры доступны для пользования.</p>
+      </div>
+
+      <div class="about__grid">
+
+        <!-- Column 1 -->
+        <div class="about__col">
+          <a href="#game-1" class="game-card">
+            <img src="img/game1.png" alt="Угадай число" class="game-card__cover">
+            <div class="game-card__body">
+              <span class="game-card__num">Игра №1</span>
+              <h3 class="game-card__name">Угадай число</h3>
+            </div>
+          </a>
+          <a href="#game-4" class="game-card">
+            <img src="img/game4.png" alt="Камень, ножницы, бумага" class="game-card__cover">
+            <div class="game-card__body">
+              <span class="game-card__num">Игра №4</span>
+              <h3 class="game-card__name">Камень, ножницы, бумага</h3>
+            </div>
+          </a>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="about__col">
+          <a href="#game-2" class="game-card">
+            <img src="img/game2.png" alt="Простая арифметика" class="game-card__cover">
+            <div class="game-card__body">
+              <span class="game-card__num">Игра №2</span>
+              <h3 class="game-card__name">Простая арифметика</h3>
+            </div>
+          </a>
+          <a href="#game-5" class="game-card">
+            <img src="img/game5.png" alt="Простая викторина" class="game-card__cover">
+            <div class="game-card__body">
+              <span class="game-card__num">Игра №5</span>
+              <h3 class="game-card__name">Простая викторина</h3>
+            </div>
+          </a>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="about__col">
+          <a href="#game-3" class="game-card">
+            <img src="img/game3.png" alt="Переверни текст" class="game-card__cover">
+            <div class="game-card__body">
+              <span class="game-card__num">Игра №3</span>
+              <h3 class="game-card__name">Переверни текст</h3>
+            </div>
+          </a>
+          <a href="#game-6" class="game-card">
+            <img src="img/game6.png" alt="Генератор случайных цветов" class="game-card__cover">
+            <div class="game-card__body">
+              <span class="game-card__num">Игра №6</span>
+              <h3 class="game-card__name">Генератор случайных цветов</h3>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p class="footer__text">Все права защищены.</p>
+  </footer>
+
+</body>
+</html>
