@@ -5,6 +5,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: #202027;
@@ -16,6 +20,10 @@ a {
   color: inherit;
 }
 
+ul {
+  list-style: none;
+}
+
 /* === Welcome block === */
 .welcome {
   position: relative;
@@ -23,7 +31,7 @@ a {
   background-color: #E1FF8F;
   display: flex;
   align-items: center;
-  padding: 120px;
+  padding: 120px 120px 170px;
   overflow: hidden;
 }
 
@@ -32,8 +40,15 @@ a {
   z-index: 1;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 48px;
   max-width: 769px;
+}
+
+.welcome__text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .welcome__title {
@@ -72,9 +87,9 @@ a {
   cursor: pointer;
 }
 
-.welcome__btn:hover {
-  background-color: transparent;
-  color: #202027;
+/* The mobile button is hidden on desktop */
+.welcome__btn--mobile {
+  display: none;
 }
 
 /* === Decorative elements (welcome) === */
@@ -84,48 +99,107 @@ a {
   user-select: none;
 }
 
-/* Big spiky starburst + outline lightning lines — top-right, partially overflows */
+/* Big spiky starburst + outline lightning lines: top-right, partially overflows */
 .welcome__deco--starburst {
   width: 680px;
   top: -160px;
   right: -60px;
 }
 
-/* Large outline star — bottom-right, partially cut off */
-.welcome__deco--star-outline {
-  width: 420px;
-  bottom: -160px;
-  right: 260px;
-  opacity: 0.9;
+/* The mobile starburst is hidden on desktop */
+.welcome__deco--starburst-mobile {
+  display: none;
 }
 
-/* Small solid 4-point stars — left side near title */
-.welcome__deco--star-sm-1 {
+/* Small 4-point stars (positions follow the 1440px Figma layout) */
+.welcome__deco--star-1 {
   width: 57px;
   top: 94px;
   left: 63px;
 }
 
-.welcome__deco--star-sm-2 {
+.welcome__deco--star-2 {
   width: 35px;
   top: 69px;
   left: 156px;
-  opacity: 0.7;
 }
 
-.welcome__deco--star-sm-3 {
+.welcome__deco--star-3 {
+  width: 37px;
+  top: 538px;
+  left: calc(50% + 228px);
+}
+
+.welcome__deco--star-4 {
   width: 83px;
-  bottom: 132px;
-  right: 427px;
-  opacity: 0.85;
+  top: 568px;
+  left: calc(50% + 293px);
+}
+
+/* === Ticker strip === */
+.ticker {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 90px;
+  background-color: #BCEC30;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+}
+
+.ticker__track {
+  display: flex;
+  width: max-content;
+  height: 100%;
+  align-items: center;
+  animation: ticker-scroll 30s linear infinite;
+}
+
+.ticker__group {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 51px;
+  padding-right: 51px;
+}
+
+.ticker__item {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 33px;
+  white-space: nowrap;
+  color: #202027;
+}
+
+.ticker__star {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+}
+
+@keyframes ticker-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 /* === About block === */
 .about {
+  position: relative;
   padding: 120px;
+  overflow: hidden;
 }
 
 .about__inner {
+  position: relative;
+  z-index: 1;
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
@@ -166,7 +240,34 @@ a {
   gap: 32px;
 }
 
-/* === Game card === */
+/* Decorative elements (about) */
+.about__deco {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+}
+
+.about__deco--big {
+  width: 567px;
+  top: 119px;
+  left: calc(50% + 255px);
+}
+
+.about__deco--small-1 {
+  width: 34px;
+  top: 770px;
+  left: calc(50% - 695px);
+  transform: rotate(5.4deg);
+}
+
+.about__deco--small-2 {
+  width: 60px;
+  top: 822px;
+  left: calc(50% - 680px);
+  transform: rotate(5.4deg);
+}
+
+/* === Game card (About block) === */
 .game-card {
   display: flex;
   flex-direction: column;
@@ -210,15 +311,254 @@ a {
   line-height: 1.2;
 }
 
+/* === Mini-games block (mobile version only) === */
+.games {
+  display: none;
+}
+
 /* === Footer === */
 .footer {
-  padding: 40px 120px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  background-color: #BDED35;
 }
 
 .footer__text {
-  font-size: 16px;
-  font-weight: 400;
-  color: #ffffff;
-  opacity: 0.5;
+  font-size: 24px;
+  font-weight: 600;
+  color: #000000;
+}
+
+/* Hover effects exist only on larger screens */
+@media (min-width: 768px) {
+  .welcome__btn:hover {
+    background-color: transparent;
+    color: #202027;
+  }
+}
+
+/* === Tablet (free-form) === */
+@media (max-width: 1199px) and (min-width: 768px) {
+  .welcome {
+    padding: 80px 60px 170px;
+  }
+
+  .welcome__title {
+    font-size: 48px;
+  }
+
+  .about {
+    padding: 80px 40px;
+  }
+
+  .about__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .about__title {
+    font-size: 48px;
+  }
+
+  .game-card__name {
+    font-size: 24px;
+  }
+}
+
+/* === Mobile (375px layout) === */
+@media (max-width: 767px) {
+  /* Welcome */
+  .welcome {
+    display: block;
+    min-height: 700px;
+    padding: 147px 18px 0;
+  }
+
+  .welcome__content {
+    align-items: center;
+    gap: 36px;
+    max-width: none;
+    text-align: center;
+  }
+
+  .welcome__text {
+    max-width: 296px;
+  }
+
+  .welcome__title {
+    font-size: 40px;
+    line-height: 1.22;
+  }
+
+  .welcome__subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.22;
+  }
+
+  .welcome__br {
+    display: none;
+  }
+
+  .welcome__btn {
+    width: 285px;
+    max-width: 100%;
+    height: 55px;
+    font-size: 16px;
+  }
+
+  .welcome__btn--desktop {
+    display: none;
+  }
+
+  .welcome__btn--mobile {
+    display: inline-flex;
+  }
+
+  /* Welcome decorations */
+  .welcome__deco--starburst {
+    display: none;
+  }
+
+  .welcome__deco--starburst-mobile {
+    display: block;
+    width: 302px;
+    top: -104px;
+    right: -115px;
+  }
+
+  .welcome__deco--star-1 {
+    width: 35px;
+    top: 97px;
+    left: 38px;
+  }
+
+  .welcome__deco--star-2 {
+    width: 21px;
+    top: 64px;
+    left: 92px;
+  }
+
+  .welcome__deco--star-3 {
+    width: 18px;
+    top: 557px;
+    left: auto;
+    right: 84px;
+  }
+
+  .welcome__deco--star-4 {
+    width: 39px;
+    top: 580px;
+    left: auto;
+    right: 32px;
+  }
+
+  /* Ticker strip */
+  .ticker {
+    height: 51px;
+  }
+
+  .ticker__group {
+    gap: 27px;
+    padding-right: 27px;
+  }
+
+  .ticker__item {
+    font-size: 16px;
+    line-height: 17.6px;
+  }
+
+  .ticker__star {
+    width: 19px;
+    height: 19px;
+  }
+
+  /* "About" block is hidden on mobile */
+  .about {
+    display: none;
+  }
+
+  /* Mini-games block */
+  .games {
+    display: block;
+    padding: 48px 16px 10px;
+  }
+
+  .games__title {
+    margin-bottom: 48px;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.22;
+    color: #ffffff;
+  }
+
+  .games__list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .mini-card {
+    overflow: hidden;
+    background-color: #ffffff;
+    border-radius: 30px;
+  }
+
+  .mini-card__cover {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 343 / 285;
+    border-radius: 30px;
+  }
+
+  .mini-card__body {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 29px 29px 33px;
+  }
+
+  .mini-card__info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .mini-card__title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 39px;
+    color: #202027;
+  }
+
+  .mini-card__text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #000000;
+  }
+
+  .mini-card__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 55px;
+    padding: 16px 28px;
+    background-color: #202027;
+    border-radius: 60px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  /* Footer */
+  .footer {
+    height: 100px;
+  }
+
+  .footer__text {
+    font-size: 16px;
+  }
 }
