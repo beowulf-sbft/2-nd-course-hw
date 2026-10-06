@@ -13,24 +13,65 @@
 
   <!-- Block 1: Welcome -->
   <section class="welcome">
-    <!-- big starburst + lightning lines, top-right -->
+    <!-- decorations -->
     <img src="img/deco-starburst.png" alt="" class="welcome__deco welcome__deco--starburst" aria-hidden="true">
-    <!-- large outline star, bottom-right -->
-    <img src="img/deco-star-outline.png" alt="" class="welcome__deco welcome__deco--star-outline" aria-hidden="true">
-    <!-- small solid 4-point stars -->
-    <img src="img/star.png" alt="" class="welcome__deco welcome__deco--star-sm-1" aria-hidden="true">
-    <img src="img/star.png" alt="" class="welcome__deco welcome__deco--star-sm-2" aria-hidden="true">
-    <img src="img/star.png" alt="" class="welcome__deco welcome__deco--star-sm-3" aria-hidden="true">
+    <img src="img/deco-starburst-mobile.png" alt="" class="welcome__deco welcome__deco--starburst-mobile" aria-hidden="true">
+    <img src="img/star-lime.svg" alt="" class="welcome__deco welcome__deco--star-1" aria-hidden="true">
+    <img src="img/star-outline.svg" alt="" class="welcome__deco welcome__deco--star-2" aria-hidden="true">
+    <img src="img/star-lime.svg" alt="" class="welcome__deco welcome__deco--star-3" aria-hidden="true">
+    <img src="img/star-outline.svg" alt="" class="welcome__deco welcome__deco--star-4" aria-hidden="true">
 
     <div class="welcome__content">
-      <h1 class="welcome__title">Добро пожаловать<br>на мой сайт мини-игр</h1>
-      <p class="welcome__subtitle">Тебе предстоит пройти несколько увлекательных игр.<br>Если готов, нажимай <span class="welcome__subtitle--semibold">«Поехали!»</span> и <span class="welcome__subtitle--semibold">приступай</span>.</p>
-      <a href="#about" class="welcome__btn">Поехали!</a>
+      <div class="welcome__text">
+        <h1 class="welcome__title">Добро пожаловать<br>на мой сайт мини-игр</h1>
+        <p class="welcome__subtitle">Тебе предстоит пройти несколько увлекательных игр. <br class="welcome__br">Если готов, нажимай <span class="welcome__subtitle--semibold">«Поехали!»</span> и <span class="welcome__subtitle--semibold">приступай</span>.</p>
+      </div>
+      <!-- desktop: scrolls to "Об играх"; mobile: scrolls to "Мини-игры" -->
+      <a href="#about" class="welcome__btn welcome__btn--desktop">Поехали!</a>
+      <a href="#games" class="welcome__btn welcome__btn--mobile">Поехали!</a>
+    </div>
+
+    <!-- Animated ticker strip -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <div class="ticker__group">
+          <span class="ticker__item">Викторина</span>
+          <img src="img/star-dark.svg" alt="" class="ticker__star">
+          <span class="ticker__item">угадай число</span>
+          <img src="img/star-dark.svg" alt="" class="ticker__star">
+          <span class="ticker__item">Переверни текст</span>
+          <img src="img/star-dark.svg" alt="" class="ticker__star">
+          <span class="ticker__item">Простая арифметика</span>
+          <img src="img/star-dark.svg" alt="" class="ticker__star">
+          <span class="ticker__item">Камень, ножницы, бумага</span>
+          <img src="img/star-dark.svg" alt="" class="ticker__star">
+          <span class="ticker__item">Генератор случайных цветов</span>
+          <img src="img/star-dark.svg" alt="" class="ticker__star">
+        </div>
+        <div class="ticker__group" aria-hidden="true">
+          <span class="ticker__item">Викторина</span>
+          <img src="img/star-dark.svg" alt="" class="ticker__star">
+          <span class="ticker__item">угадай число</span>
+          <img src="img/star-dark.svg" alt="" class="ticker__star">
+          <span class="ticker__item">Переверни текст</span>
+          <img src="img/star-dark.svg" alt="" class="ticker__star">
+          <span class="ticker__item">Простая арифметика</span>
+          <img src="img/star-dark.svg" alt="" class="ticker__star">
+          <span class="ticker__item">Камень, ножницы, бумага</span>
+          <img src="img/star-dark.svg" alt="" class="ticker__star">
+          <span class="ticker__item">Генератор случайных цветов</span>
+          <img src="img/star-dark.svg" alt="" class="ticker__star">
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Block 2: About games -->
+  <!-- Block 2: About games (hidden on mobile) -->
   <section class="about" id="about">
+    <img src="img/deco-star-outline.png" alt="" class="about__deco about__deco--big" aria-hidden="true">
+    <img src="img/star-outline-lime.svg" alt="" class="about__deco about__deco--small-1" aria-hidden="true">
+    <img src="img/star-outline-lime.svg" alt="" class="about__deco about__deco--small-2" aria-hidden="true">
+
     <div class="about__inner">
       <div class="about__header">
         <h2 class="about__title">Об играх</h2>
@@ -95,6 +136,73 @@
 
       </div>
     </div>
+  </section>
+
+  <!-- Block 3: Mini-games (mobile version only) -->
+  <section class="games" id="games">
+    <h2 class="games__title">Мини-игры</h2>
+    <ul class="games__list">
+        <li class="mini-card" id="game-1">
+          <img src="img/mini-game1.png" alt="Угадай число" class="mini-card__cover" width="343" height="285">
+          <div class="mini-card__body">
+            <div class="mini-card__info">
+              <h3 class="mini-card__title">Угадай число</h3>
+              <p class="mini-card__text">Попробуй угадать случайное<br>число от 1 до 100.</p>
+            </div>
+            <a href="#game-1" class="mini-card__btn">Играть!</a>
+          </div>
+        </li>
+        <li class="mini-card" id="game-2">
+          <img src="img/mini-game2.png" alt="Простая арифметика" class="mini-card__cover" width="343" height="285">
+          <div class="mini-card__body">
+            <div class="mini-card__info">
+              <h3 class="mini-card__title">Простая<br>арифметика</h3>
+              <p class="mini-card__text">Попробуй решить простые<br>арифметические задачи.</p>
+            </div>
+            <a href="#game-2" class="mini-card__btn">Играть!</a>
+          </div>
+        </li>
+        <li class="mini-card" id="game-3">
+          <img src="img/mini-game3.png" alt="Переверни текст" class="mini-card__cover" width="343" height="285">
+          <div class="mini-card__body">
+            <div class="mini-card__info">
+              <h3 class="mini-card__title">Переверни текст</h3>
+              <p class="mini-card__text">Попробуй ввести текст, который<br>будет перевернут.</p>
+            </div>
+            <a href="#game-3" class="mini-card__btn">Играть!</a>
+          </div>
+        </li>
+        <li class="mini-card" id="game-4">
+          <img src="img/mini-game4.png" alt="Камень, ножницы, бумага" class="mini-card__cover" width="343" height="285">
+          <div class="mini-card__body">
+            <div class="mini-card__info">
+              <h3 class="mini-card__title">Камень,<br>ножницы,<br>бумага</h3>
+              <p class="mini-card__text">Сыграй в популярную игру против компьютера.</p>
+            </div>
+            <a href="#game-4" class="mini-card__btn">Играть!</a>
+          </div>
+        </li>
+        <li class="mini-card" id="game-5">
+          <img src="img/mini-game5.png" alt="Простая викторина" class="mini-card__cover" width="343" height="285">
+          <div class="mini-card__body">
+            <div class="mini-card__info">
+              <h3 class="mini-card__title">Простая<br>викторина</h3>
+              <p class="mini-card__text">Отвечай на вопросы викторины<br>с вариантами ответов.</p>
+            </div>
+            <a href="#game-5" class="mini-card__btn">Играть!</a>
+          </div>
+        </li>
+        <li class="mini-card" id="game-6">
+          <img src="img/mini-game6.png" alt="Генератор случайных цветов" class="mini-card__cover" width="343" height="285">
+          <div class="mini-card__body">
+            <div class="mini-card__info">
+              <h3 class="mini-card__title">Генератор<br>случайных<br>цветов</h3>
+              <p class="mini-card__text">Игра, в которой при клике<br>на кнопку фон страницы меняется на случайный.</p>
+            </div>
+            <a href="#game-6" class="mini-card__btn">Играть!</a>
+          </div>
+        </li>
+    </ul>
   </section>
 
   <footer class="footer">
