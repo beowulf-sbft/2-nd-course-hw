@@ -69,7 +69,8 @@ ul {
   font-weight: 600;
 }
 
-.welcome__btn {
+/* === Button (shared block: "Поехали!" and "Играть!") === */
+.btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -311,8 +312,119 @@ ul {
   line-height: 1.2;
 }
 
-/* === Mini-games block (mobile version only) === */
+/* === Mini-games block === */
 .games {
+  position: relative;
+  padding: 46px 40px 144px;
+  overflow: hidden;
+}
+
+.games__title {
+  max-width: 1200px;
+  margin: 0 auto 72px;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.22;
+  color: #ffffff;
+}
+
+.games__list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Decorative elements (mini-games) */
+.games__deco {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+}
+
+.games__deco--star-1 {
+  width: 75px;
+  top: 126px;
+  left: calc(50% + 600px);
+  transform: rotate(5.4deg);
+}
+
+.games__deco--star-2 {
+  width: 39px;
+  top: 93px;
+  left: calc(50% + 557px);
+  transform: rotate(7.1deg);
+}
+
+.games__deco--star-3 {
+  width: 69px;
+  bottom: 65px;
+  left: calc(50% + 599px);
+}
+
+.games__deco--star-4 {
+  width: 41px;
+  bottom: 45px;
+  left: calc(50% + 529px);
+}
+
+/* === Mini-game card === */
+/* Cover on the left, text on the right; the --reverse modifier swaps them */
+.mini-card {
+  display: flex;
+  min-height: 500px;
+  scroll-margin-top: 32px;
+  overflow: hidden;
+  background-color: #ffffff;
+  border-radius: 30px;
+}
+
+.mini-card--reverse {
+  flex-direction: row-reverse;
+}
+
+.mini-card__cover {
+  display: block;
+  flex: 0 0 50%;
+  width: 50%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+.mini-card__body {
+  display: flex;
+  flex: 0 0 50%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 36px;
+  padding: 48px;
+}
+
+.mini-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mini-card__title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.22;
+  color: #202027;
+}
+
+.mini-card__text {
+  max-width: 497px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  color: #202027;
+}
+
+/* Line break used only in the mobile version */
+.mini-card__br {
   display: none;
 }
 
@@ -333,7 +445,7 @@ ul {
 
 /* Hover effects exist only on larger screens */
 @media (min-width: 768px) {
-  .welcome__btn:hover {
+  .btn:hover {
     background-color: transparent;
     color: #202027;
   }
@@ -363,6 +475,36 @@ ul {
 
   .game-card__name {
     font-size: 24px;
+  }
+
+  .games__title {
+    font-size: 48px;
+  }
+
+  .games__deco {
+    display: none;
+  }
+
+  .mini-card {
+    min-height: 0;
+  }
+
+  .mini-card__cover {
+    height: auto;
+    aspect-ratio: 6 / 5;
+  }
+
+  .mini-card__body {
+    padding: 32px;
+  }
+
+  .mini-card__title {
+    font-size: 36px;
+  }
+
+  .mini-card__text {
+    font-size: 20px;
+    line-height: 28px;
   }
 }
 
@@ -401,11 +543,14 @@ ul {
     display: none;
   }
 
+  .btn {
+    height: 55px;
+    font-size: 16px;
+  }
+
   .welcome__btn {
     width: 285px;
     max-width: 100%;
-    height: 55px;
-    font-size: 16px;
   }
 
   .welcome__btn--desktop {
@@ -479,78 +624,65 @@ ul {
     display: none;
   }
 
-  /* Mini-games block */
+  /* Mini-games block: cover above the text in every card */
   .games {
-    display: block;
     padding: 48px 16px 10px;
   }
 
   .games__title {
     margin-bottom: 48px;
     font-size: 40px;
-    font-weight: 700;
-    line-height: 1.22;
-    color: #ffffff;
   }
 
   .games__list {
-    display: flex;
-    flex-direction: column;
     gap: 24px;
   }
 
-  .mini-card {
-    overflow: hidden;
-    background-color: #ffffff;
-    border-radius: 30px;
+  .games__deco {
+    display: none;
+  }
+
+  .mini-card,
+  .mini-card--reverse {
+    flex-direction: column;
+    min-height: 0;
   }
 
   .mini-card__cover {
-    display: block;
+    flex: none;
     width: 100%;
     height: auto;
     aspect-ratio: 343 / 285;
-    border-radius: 30px;
   }
 
   .mini-card__body {
-    display: flex;
-    flex-direction: column;
+    flex: none;
+    align-items: stretch;
     gap: 32px;
     padding: 29px 29px 33px;
   }
 
   .mini-card__info {
-    display: flex;
-    flex-direction: column;
     gap: 16px;
   }
 
   .mini-card__title {
     font-size: 32px;
-    font-weight: 700;
     line-height: 39px;
-    color: #202027;
   }
 
   .mini-card__text {
     font-size: 16px;
-    font-weight: 400;
     line-height: 20px;
     color: #000000;
   }
 
+  .mini-card__br {
+    display: inline;
+  }
+
   .mini-card__btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 55px;
-    padding: 16px 28px;
-    background-color: #202027;
-    border-radius: 60px;
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 600;
+    width: 100%;
   }
 
   /* Footer */
