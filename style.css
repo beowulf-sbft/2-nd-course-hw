@@ -172,6 +172,7 @@ ul {
   font-weight: 700;
   line-height: 33px;
   white-space: nowrap;
+  text-transform: uppercase;
   color: #202027;
 }
 
@@ -568,9 +569,9 @@ ul {
 
   .welcome__deco--starburst-mobile {
     display: block;
-    width: 302px;
-    top: -104px;
-    right: -115px;
+    width: 247.5px;
+    top: -83.5px;
+    right: -88.5px;
   }
 
   .welcome__deco--star-1 {
@@ -630,11 +631,14 @@ ul {
   }
 
   .games__title {
+    max-width: 480px;
     margin-bottom: 48px;
     font-size: 40px;
   }
 
+  /* On large phones the cards stop growing at 480px and stay centered */
   .games__list {
+    max-width: 480px;
     gap: 24px;
   }
 
