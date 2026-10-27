@@ -19,11 +19,30 @@ const quiz = [
   },
 ];
 
+// Ответ корректен, если это целое число от 1 до количества вариантов
+function isValidAnswer(answer, optionsCount) {
+  const value = answer.trim();
+
+  if (!/^\d+$/.test(value)) {
+    return false;
+  }
+
+  const number = Number(value);
+  return number >= 1 && number <= optionsCount;
+}
+
 function startQuiz() {
   let correctCount = 0;
 
   for (const item of quiz) {
-    const answer = prompt(`${item.question}\n\n${item.options.join('\n')}\n\nВведите номер ответа:`);
+    const questionText = `${item.question}\n\n${item.options.join('\n')}\n\nВведите номер ответа:`;
+    let answer = prompt(questionText);
+
+    // При некорректном вводе показываем сообщение и задаем тот же вопрос снова
+    while (answer !== null && !isValidAnswer(answer, item.options.length)) {
+      alert(`Некорректный ввод. Введите номер ответа от 1 до ${item.options.length}`);
+      answer = prompt(questionText);
+    }
 
     // Cancel — игра прерывается
     if (answer === null) {
@@ -31,8 +50,7 @@ function startQuiz() {
       return;
     }
 
-    // Пустой или нечисловой ответ считается неправильным
-    if (answer.trim() !== '' && Number(answer) === item.correctAnswer) {
+    if (Number(answer) === item.correctAnswer) {
       correctCount++;
     }
   }
