@@ -242,6 +242,11 @@ ul {
   gap: 32px;
 }
 
+/* The bottom card fills the column, so all columns end at the same height */
+.about__col .game-card:last-child {
+  flex-grow: 1;
+}
+
 /* Decorative elements (about) */
 .about__deco {
   position: absolute;
@@ -295,10 +300,16 @@ ul {
   gap: 16px;
 }
 
+/* Figma: the game number is a light grey pill */
 .game-card__num {
+  align-self: flex-start;
+  padding: 8px 16px 10px;
+  background-color: #f7f7f7;
+  border-radius: 52px;
   font-size: 16px;
-  font-weight: 400;
-  color: #9b9b9b;
+  font-weight: 500;
+  line-height: 1.1;
+  color: #202027;
 }
 
 .game-card__name {
