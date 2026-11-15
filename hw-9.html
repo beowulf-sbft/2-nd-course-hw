@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HW 9: Основы работы DOM</title>
+</head>
+<body>
+  <header>
+    <h1>HW 9: Основы работы DOM</h1>
+    <p>Решения заданий находятся в файле hw-9.js. Каждое задание работает только с элементами своего раздела. Задания 4 и 5 выполняются при загрузке страницы; кнопки позволяют вернуть исходный текст и выполнить скрипт снова.</p>
+  </header>
+
+  <main>
+    <section id="task-1">
+      <h2>Задание 1. Скрытие и показ текста</h2>
+      <h1 class="task-1__title">Этот заголовок можно скрыть</h1>
+      <button type="button" class="task-1__btn">Скрыть</button>
+    </section>
+
+    <section id="task-2">
+      <h2>Задание 2. Изменение стиля элемента</h2>
+      <p class="task-2__text">Нажмите на кнопку, и этот текст станет синим.</p>
+      <button type="button" class="task-2__btn">Изменить цвет</button>
+    </section>
+
+    <section id="task-3">
+      <h2>Задание 3. Динамическое изменение текста</h2>
+      <h1 class="task-3__title">Исходный текст заголовка</h1>
+      <button type="button" class="task-3__btn">Изменить текст</button>
+    </section>
+
+    <section id="task-4">
+      <h2>Задание 4. Поиск и изменение элементов по классу</h2>
+      <p class="description">Первое описание</p>
+      <div class="description">Второе описание</div>
+      <span class="description">Третье описание</span>
+      <p>
+        <button type="button" class="task-4__run">Выполнить скрипт</button>
+        <button type="button" class="task-4__reset">Вернуть исходный текст</button>
+      </p>
+    </section>
+
+    <section id="task-5">
+      <h2>Задание 5. Работа с querySelectorAll</h2>
+      <p class="description">Абзац с классом description</p>
+      <p class="note">Абзац с классом note</p>
+      <p class="description">Еще один абзац с классом description</p>
+      <p>Абзац без класса</p>
+      <p>
+        <button type="button" class="task-5__run">Выполнить скрипт</button>
+        <button type="button" class="task-5__reset">Вернуть исходный текст</button>
+      </p>
+    </section>
+
+    <section id="task-6">
+      <h2>Задание 6. Добавление нового элемента в DOM</h2>
+      <p>Новые абзацы добавляются в самый конец страницы.</p>
+      <button type="button" class="task-6__btn">Добавить элемент</button>
+    </section>
+
+    <section id="task-7">
+      <h2>Задание 7. Удаление элемента</h2>
+      <p class="description">Первый абзац с классом description</p>
+      <p>Абзац без класса</p>
+      <p class="description">Второй абзац с классом description</p>
+      <p class="description">Третий абзац с классом description</p>
+      <button type="button" class="task-7__btn">Удалить элемент</button>
+    </section>
+  </main>
+
+  <script src="hw-9.js"></script>
+</body>
+</html>
