@@ -10,142 +10,142 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <main>
+    <!-- Block 1: Welcome -->
+    <section class="welcome">
+      <!-- decorations -->
+      <img src="img/deco-starburst.png" alt="" class="welcome__deco welcome__deco--starburst" aria-hidden="true">
+      <img src="img/deco-starburst-mobile.png" alt="" class="welcome__deco welcome__deco--starburst-mobile" aria-hidden="true">
+      <img src="img/star-lime.svg" alt="" class="welcome__deco welcome__deco--star-1" aria-hidden="true">
+      <img src="img/star-outline.svg" alt="" class="welcome__deco welcome__deco--star-2" aria-hidden="true">
+      <img src="img/star-lime.svg" alt="" class="welcome__deco welcome__deco--star-3" aria-hidden="true">
+      <img src="img/star-outline.svg" alt="" class="welcome__deco welcome__deco--star-4" aria-hidden="true">
 
-  <!-- Block 1: Welcome -->
-  <section class="welcome">
-    <!-- decorations -->
-    <img src="img/deco-starburst.png" alt="" class="welcome__deco welcome__deco--starburst" aria-hidden="true">
-    <img src="img/deco-starburst-mobile.png" alt="" class="welcome__deco welcome__deco--starburst-mobile" aria-hidden="true">
-    <img src="img/star-lime.svg" alt="" class="welcome__deco welcome__deco--star-1" aria-hidden="true">
-    <img src="img/star-outline.svg" alt="" class="welcome__deco welcome__deco--star-2" aria-hidden="true">
-    <img src="img/star-lime.svg" alt="" class="welcome__deco welcome__deco--star-3" aria-hidden="true">
-    <img src="img/star-outline.svg" alt="" class="welcome__deco welcome__deco--star-4" aria-hidden="true">
-
-    <div class="welcome__content">
-      <div class="welcome__text">
-        <h1 class="welcome__title">Добро пожаловать<br>на мой сайт мини-игр</h1>
-        <p class="welcome__subtitle">Тебе предстоит пройти несколько увлекательных игр. <br class="welcome__br">Если готов, нажимай <span class="welcome__accent">«Поехали!»</span> и <span class="welcome__accent">приступай</span>.</p>
-      </div>
-      <!-- desktop: scrolls to "Об играх"; mobile: scrolls to "Мини-игры" -->
-      <a href="#about" class="btn welcome__btn welcome__btn--desktop">Поехали!</a>
-      <a href="#games" class="btn welcome__btn welcome__btn--mobile">Поехали!</a>
-    </div>
-
-    <!-- Animated ticker strip -->
-    <div class="ticker" aria-hidden="true">
-      <div class="ticker__track">
-        <div class="ticker__group">
-          <span class="ticker__item">Викторина</span>
-          <img src="img/star-dark.svg" alt="" class="ticker__star">
-          <span class="ticker__item">угадай число</span>
-          <img src="img/star-dark.svg" alt="" class="ticker__star">
-          <span class="ticker__item">Переверни текст</span>
-          <img src="img/star-dark.svg" alt="" class="ticker__star">
-          <span class="ticker__item">Простая арифметика</span>
-          <img src="img/star-dark.svg" alt="" class="ticker__star">
-          <span class="ticker__item">Камень, ножницы, бумага</span>
-          <img src="img/star-dark.svg" alt="" class="ticker__star">
-          <span class="ticker__item">Генератор случайных цветов</span>
-          <img src="img/star-dark.svg" alt="" class="ticker__star">
+      <div class="welcome__content">
+        <div class="welcome__text">
+          <h1 class="welcome__title">Добро пожаловать<br>на мой сайт мини-игр</h1>
+          <p class="welcome__subtitle">Тебе предстоит пройти несколько увлекательных игр. <br class="welcome__br">Если готов, нажимай <span class="welcome__accent">«Поехали!»</span> и <span class="welcome__accent">приступай</span>.</p>
         </div>
-        <div class="ticker__group" aria-hidden="true">
-          <span class="ticker__item">Викторина</span>
-          <img src="img/star-dark.svg" alt="" class="ticker__star">
-          <span class="ticker__item">угадай число</span>
-          <img src="img/star-dark.svg" alt="" class="ticker__star">
-          <span class="ticker__item">Переверни текст</span>
-          <img src="img/star-dark.svg" alt="" class="ticker__star">
-          <span class="ticker__item">Простая арифметика</span>
-          <img src="img/star-dark.svg" alt="" class="ticker__star">
-          <span class="ticker__item">Камень, ножницы, бумага</span>
-          <img src="img/star-dark.svg" alt="" class="ticker__star">
-          <span class="ticker__item">Генератор случайных цветов</span>
-          <img src="img/star-dark.svg" alt="" class="ticker__star">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Block 2: About games (hidden on mobile) -->
-  <section class="about" id="about">
-    <img src="img/deco-star-outline.png" alt="" class="about__deco about__deco--big" aria-hidden="true">
-    <img src="img/star-outline-lime.svg" alt="" class="about__deco about__deco--small-1" aria-hidden="true">
-    <img src="img/star-outline-lime.svg" alt="" class="about__deco about__deco--small-2" aria-hidden="true">
-
-    <div class="about__inner">
-      <div class="about__header">
-        <h2 class="about__title">Об играх</h2>
-        <p class="about__desc">В моей коллекции представлено 6 игр на разные темы. Игры несложные — в них может поиграть каждый. Все игры доступны для пользования.</p>
+        <!-- desktop: scrolls to "Об играх"; mobile: scrolls to "Мини-игры" -->
+        <a href="#about" class="btn welcome__btn welcome__btn--desktop">Поехали!</a>
+        <a href="#games" class="btn welcome__btn welcome__btn--mobile">Поехали!</a>
       </div>
 
-      <div class="about__grid">
-
-        <!-- Column 1 -->
-        <div class="about__col">
-          <a href="#game-1" class="game-card">
-            <img src="img/game1.png" alt="Угадай число" class="game-card__cover">
-            <div class="game-card__body">
-              <span class="game-card__num">Игра № 1</span>
-              <h3 class="game-card__name">Угадай число</h3>
-            </div>
-          </a>
-          <a href="#game-4" class="game-card">
-            <img src="img/game4.png" alt="Камень, ножницы, бумага" class="game-card__cover">
-            <div class="game-card__body">
-              <span class="game-card__num">Игра № 4</span>
-              <h3 class="game-card__name">Камень, ножницы,<br>бумага</h3>
-            </div>
-          </a>
+      <!-- Animated ticker strip -->
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker__track">
+          <div class="ticker__group">
+            <span class="ticker__item">Викторина</span>
+            <img src="img/star-dark.svg" alt="" class="ticker__star">
+            <span class="ticker__item">угадай число</span>
+            <img src="img/star-dark.svg" alt="" class="ticker__star">
+            <span class="ticker__item">Переверни текст</span>
+            <img src="img/star-dark.svg" alt="" class="ticker__star">
+            <span class="ticker__item">Простая арифметика</span>
+            <img src="img/star-dark.svg" alt="" class="ticker__star">
+            <span class="ticker__item">Камень, ножницы, бумага</span>
+            <img src="img/star-dark.svg" alt="" class="ticker__star">
+            <span class="ticker__item">Генератор случайных цветов</span>
+            <img src="img/star-dark.svg" alt="" class="ticker__star">
+          </div>
+          <div class="ticker__group" aria-hidden="true">
+            <span class="ticker__item">Викторина</span>
+            <img src="img/star-dark.svg" alt="" class="ticker__star">
+            <span class="ticker__item">угадай число</span>
+            <img src="img/star-dark.svg" alt="" class="ticker__star">
+            <span class="ticker__item">Переверни текст</span>
+            <img src="img/star-dark.svg" alt="" class="ticker__star">
+            <span class="ticker__item">Простая арифметика</span>
+            <img src="img/star-dark.svg" alt="" class="ticker__star">
+            <span class="ticker__item">Камень, ножницы, бумага</span>
+            <img src="img/star-dark.svg" alt="" class="ticker__star">
+            <span class="ticker__item">Генератор случайных цветов</span>
+            <img src="img/star-dark.svg" alt="" class="ticker__star">
+          </div>
         </div>
-
-        <!-- Column 2 -->
-        <div class="about__col">
-          <a href="#game-2" class="game-card">
-            <img src="img/game2.png" alt="Простая арифметика" class="game-card__cover">
-            <div class="game-card__body">
-              <span class="game-card__num">Игра № 2</span>
-              <h3 class="game-card__name">Простая арифметика</h3>
-            </div>
-          </a>
-          <a href="#game-5" class="game-card">
-            <img src="img/game5.png" alt="Простая викторина" class="game-card__cover">
-            <div class="game-card__body">
-              <span class="game-card__num">Игра № 5</span>
-              <h3 class="game-card__name">Простая викторина</h3>
-            </div>
-          </a>
-        </div>
-
-        <!-- Column 3 -->
-        <div class="about__col">
-          <a href="#game-3" class="game-card">
-            <img src="img/game3.png" alt="Переверни текст" class="game-card__cover">
-            <div class="game-card__body">
-              <span class="game-card__num">Игра № 3</span>
-              <h3 class="game-card__name">Переверни текст</h3>
-            </div>
-          </a>
-          <a href="#game-6" class="game-card">
-            <img src="img/game6.png" alt="Генератор случайных цветов" class="game-card__cover">
-            <div class="game-card__body">
-              <span class="game-card__num">Игра № 6</span>
-              <h3 class="game-card__name">Генератор случайных цветов</h3>
-            </div>
-          </a>
-        </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Block 3: Mini-games -->
-  <section class="games" id="games">
-    <img src="img/star-outline-lime.svg" alt="" class="games__deco games__deco--star-1" aria-hidden="true">
-    <img src="img/star-outline-lime.svg" alt="" class="games__deco games__deco--star-2" aria-hidden="true">
-    <img src="img/star-outline-lime.svg" alt="" class="games__deco games__deco--star-3" aria-hidden="true">
-    <img src="img/star-outline-lime.svg" alt="" class="games__deco games__deco--star-4" aria-hidden="true">
-    <h2 class="games__title">Мини-игры</h2>
-    <ul class="games__list">
+    <!-- Block 2: About games (hidden on mobile) -->
+    <section class="about" id="about">
+      <img src="img/deco-star-outline.png" alt="" class="about__deco about__deco--big" aria-hidden="true">
+      <img src="img/star-outline-lime.svg" alt="" class="about__deco about__deco--small-1" aria-hidden="true">
+      <img src="img/star-outline-lime.svg" alt="" class="about__deco about__deco--small-2" aria-hidden="true">
+
+      <div class="about__inner">
+        <div class="about__header">
+          <h2 class="about__title">Об играх</h2>
+          <p class="about__desc">В моей коллекции представлено 6 игр на разные темы.<br class="about__br"> Игры несложные — в них может поиграть каждый.<br class="about__br"> Все игры доступны для пользования.</p>
+        </div>
+
+        <div class="about__grid">
+
+          <!-- Column 1 -->
+          <div class="about__col">
+            <a href="#game-1" class="game-card">
+              <img src="img/game1.png" alt="Угадай число" class="game-card__cover">
+              <div class="game-card__body">
+                <span class="game-card__num">Игра № 1</span>
+                <h3 class="game-card__name">Угадай число</h3>
+              </div>
+            </a>
+            <a href="#game-4" class="game-card">
+              <img src="img/game4.png" alt="Камень, ножницы, бумага" class="game-card__cover">
+              <div class="game-card__body">
+                <span class="game-card__num">Игра № 4</span>
+                <h3 class="game-card__name">Камень, ножницы,<br>бумага</h3>
+              </div>
+            </a>
+          </div>
+
+          <!-- Column 2 -->
+          <div class="about__col">
+            <a href="#game-2" class="game-card">
+              <img src="img/game2.png" alt="Простая арифметика" class="game-card__cover">
+              <div class="game-card__body">
+                <span class="game-card__num">Игра № 2</span>
+                <h3 class="game-card__name">Простая арифметика</h3>
+              </div>
+            </a>
+            <a href="#game-5" class="game-card">
+              <img src="img/game5.png" alt="Простая викторина" class="game-card__cover">
+              <div class="game-card__body">
+                <span class="game-card__num">Игра № 5</span>
+                <h3 class="game-card__name">Простая викторина</h3>
+              </div>
+            </a>
+          </div>
+
+          <!-- Column 3 -->
+          <div class="about__col">
+            <a href="#game-3" class="game-card">
+              <img src="img/game3.png" alt="Переверни текст" class="game-card__cover">
+              <div class="game-card__body">
+                <span class="game-card__num">Игра № 3</span>
+                <h3 class="game-card__name">Переверни текст</h3>
+              </div>
+            </a>
+            <a href="#game-6" class="game-card">
+              <img src="img/game6.png" alt="Генератор случайных цветов" class="game-card__cover">
+              <div class="game-card__body">
+                <span class="game-card__num">Игра № 6</span>
+                <h3 class="game-card__name">Генератор случайных цветов</h3>
+              </div>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Block 3: Mini-games -->
+    <section class="games" id="games">
+      <img src="img/star-outline-lime.svg" alt="" class="games__deco games__deco--star-1" aria-hidden="true">
+      <img src="img/star-outline-lime.svg" alt="" class="games__deco games__deco--star-2" aria-hidden="true">
+      <img src="img/star-outline-lime.svg" alt="" class="games__deco games__deco--star-3" aria-hidden="true">
+      <img src="img/star-outline-lime.svg" alt="" class="games__deco games__deco--star-4" aria-hidden="true">
+      <h2 class="games__title">Мини-игры</h2>
+      <ul class="games__list">
         <li class="mini-card mini-card--reverse" id="game-1">
           <img src="img/mini-game1.png" alt="Угадай число" class="mini-card__cover" width="600" height="500">
           <div class="mini-card__body">
@@ -203,11 +203,12 @@
               <h3 class="mini-card__title">Генератор<br>случайных<br>цветов</h3>
               <p class="mini-card__text">Игра, в которой при клике<br class="mini-card__br"> на кнопку фон страницы меняется на случайный.</p>
             </div>
-            <a href="#game-6" class="btn mini-card__btn">Играть!</a>
+            <button type="button" class="btn mini-card__btn" id="color-start">Играть!</button>
           </div>
         </li>
-    </ul>
-  </section>
+      </ul>
+    </section>
+  </main>
 
   <footer class="footer">
     <p class="footer__text">Все права защищены.</p>
@@ -218,5 +219,6 @@
   <script src="reverse-text.js"></script>
   <script src="rock-paper-scissors.js"></script>
   <script src="quiz.js"></script>
+  <script src="color-generator.js"></script>
 </body>
 </html>
